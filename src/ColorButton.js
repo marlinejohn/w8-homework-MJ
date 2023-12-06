@@ -1,13 +1,14 @@
 import React, { PureComponent } from 'react'
+import WithColor from './withColor';
 
  class ColorButton extends PureComponent {
   render() {
-    const { color, toggleColor, buttonName } = this.props;
+    const { color, toggleColor } = this.props;
 
     return (
-        <button  > Click me</button>
+        <button style={{backgroundColor: color}} onClick={toggleColor}  > Click me for color change</button>
     )
   }
 }
 
-export default ColorButton
+export default WithColor(ColorButton)
